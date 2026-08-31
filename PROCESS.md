@@ -27,39 +27,177 @@ $env:PYTHONIOENCODING="utf-8"
 python -X utf8 gmail_interactive.py
 ```
 
-## Quy trình đã ghi nhận (5 bước)
+## Quy trình — chi tiết từng thao tác (để sau tự động hóa)
 
-Mình đã thực hiện thủ công các thao tác sau trên browser Playwright, script chỉ quan sát + log:
+URL gốc: `https://accounts.google.com/signup` — đã được Google redirect sang URL thật `/lifecycle/steps/signup/...` ngay sau khi load.
 
-### Bước 1 — Nhập tên
-- **URL:** `accounts.google.com/lifecycle/steps/signup/name`
-- **Thao tác:** Điền `firstName` = "Nguyen", `lastName` = "Test" → bấm **Next**
-- **Kết quả:** Pass → chuyển bước 2
+Mỗi bước có format:
+- **URL:** path của endpoint Google
+- **Selectors:** chính xác selector CSS / XPath dùng để tương tác
+- **Action:** hành động cần làm (fill/select/click)
+- **Verify:** cách biết step đã pass
 
-### Bước 2 — Ngày sinh + Giới tính
-- **URL:** `accounts.google.com/lifecycle/steps/signup/birthdaygender`
-- **Thao tác:** Chọn Month (dropdown, có sẵn giá trị April mặc định), điền `day`, `year` → bấm **Next**
-- **Kết quả:** Pass → chuyển bước 3
-- **Lưu ý:** Dropdown dùng custom widget, KHÔNG phải `<select>` thường
+### Bước 1 — Name
+- **URL:** `https://accounts.google.com/lifecycle/steps/signup/name?dsh=...&flowEntry=SignUp&flowName=GlifWebSignIn&TL=...&continue=...`
+- **Selectors:**
+  - `#firstName` — input text "First name"
+  - `#lastName` — input text "Last name (optional)"
+  - `button:has-text("Next")` — nút Next (cũng là `<button>` không có id, match theo text)
+- **Action:**
+  ```
+  page.fill('#firstName', 'Nguyen')
+  page.fill('#lastName', 'Test')
+  page.click('button:has-text("Next")')
+  ```
+- **Verify:** URL đổi từ `/name` → `/birthdaygender`. Cookie flow name chuyển tiếp tự động.
 
-### Bước 3 — Chọn Gmail address
-- **URL:** `accounts.google.com/lifecycle/steps/signup/username`
-- **Thao tác:** Điền `Username` (sẽ append `@gmail.com`) → bấm **Next**
-- **Kết quả:** Pass → chuyển bước 4
+### Bước 2 — Birthday + Gender
+- **URL:** `https://accounts.google.com/lifecycle/steps/signup/birthdaygender?...`
+- **Selectors:**
+  - `[aria-label="Month"]` hoặc click button month hiện tại (mặc định là "April" hoặc "January" tùy locale) — **KHÔNG phải `<select>`**, đây là custom dropdown. Mở → chọn option trong listbox
+  - `input[name="day"]` — input `type="tel"`, aria-label "Day"
+  - `input[name="year"]` — input `type="tel"`, aria-label "Year"
+  - `[role="radio"]` cho Gender (Female / Male / Rather not say / Custom) — KHÔNG phải `<input type=radio>`
+  - `button:has-text("Next")`
+- **Action:**
+  ```
+  # Month dropdown
+  page.click('[aria-label="Month"]')                # mở dropdown
+  page.click('div[role="option"]:has-text("June")')  # chọn option
 
-### Bước 4 — Mật khẩu
-- **URL:** `accounts.google.com/lifecycle/steps/signup/password`
-- **Thao tác:** Điền `Passwd` + `PasswdAgain` → bấm **Next**
-- **Kết quả:** Pass → chuyển bước 5
+  page.fill('input[name="day"]', '15')
+  page.fill('input[name="year"]', '1995')
 
-### Bước 5 — 🚨 XÁC MINH QR
-- **URL:** `accounts.google.com/lifecycle/steps/signup/mophoneverification/initial`
-- **Hiển thị:**
-  - Tiêu đề: "Verify some info before creating an account"
-  - Text: "Google needs to verify some info about your device or phone number before you can continue. This helps keep you and others safe online by preventing abuse from computer programs or bots."
-  - **QR 240×240 px**, base64 PNG inline, alt = "Image of QR code to scan with the camera on your mobile device."
-  - Hướng dẫn: "Open your Camera app, scan the code, and tap the link. Then, follow a few more steps on your phone to complete verification. You'll need to switch back to this device to continue."
-- **Trạng thái:** ❌ KHÔNG có input nào — chỉ có nút Help / Privacy / Terms → **KHÔNG THỂ tiếp tục** nếu không quét QR
+  # Gender (chọn 1 trong 4)
+  page.click('[role="radio"][aria-label*="Male"]')   # hoặc Female
+  # Nếu chọn "Rather not say" / "Custom" thì có thêm ô input
+
+  page.click('button:has-text("Next")')
+  ```
+- **Verify:** URL đổi → `/username`. Không xuất hiện error message nào dưới input.
+
+### Bước 3 — Username (Gmail address)
+- **URL:** `https://accounts.google.com/lifecycle/steps/signup/username?...`
+- **Selectors:**
+  - `input[aria-label="Username"]` — input text, append `@gmail.com` tự động
+  - `button:has-text("Next")`
+  - `button:has-text("Use your existing email")` — option phụ, không cần click
+- **Action:**
+  ```
+  page.fill('input[aria-label="Username"]', 'nguyentest' + random_string(6))
+  page.click('button:has-text("Next")')
+  ```
+- **Lưu ý:** Username phải unique. Google check availability real-time; nếu trùng sẽ hiển thị gợi ý khác.
+- **Verify:** URL đổi → `/password`.
+
+### Bước 4 — Password
+- **URL:** `https://accounts.google.com/lifecycle/steps/signup/password?...`
+- **Selectors:**
+  - `input[aria-label="Password"]` — `type="password"`, `name="Passwd"`
+  - `input[aria-label="Confirm"]` — `type="password"`, `name="PasswdAgain"`
+  - `input[type="checkbox"]` — checkbox "Show password" (optional, không cần check)
+  - `button:has-text("Next")`
+- **Action:**
+  ```
+  page.fill('input[aria-label="Password"]', 'TestPass123!')
+  page.fill('input[aria-label="Confirm"]', 'TestPass123!')
+  page.click('button:has-text("Next")')
+  ```
+- **Verify:** URL đổi → `/mophoneverification/initial`. **Đây là bước QR.**
+
+### Bước 5 — 🚨 QR Verification (CHẶN)
+- **URL:** `https://accounts.google.com/lifecycle/steps/signup/mophoneverification/initial?...`
+- **Selectors:**
+  - `img[alt*="QR code"]` — QR 240×240 px, `src="data:image/png;base64,..."`
+  - Container: `<section class="Em2Ord">` (class Google dùng để wrap QR)
+  - **KHÔNG có input/select/button nào khác ngoài Help/Privacy/TTerms** — đây là điểm dừng
+- **Action (manual only):**
+  1. Mở Camera app trên điện thoại (đã đăng nhập Google account)
+  2. Quét QR
+  3. Tap link Google hiện ra → app Google mở → confirm trên điện thoại (fingerprint / PIN)
+  4. Quay lại browser → tự động redirect sang bước tiếp theo (`/signup/verifyemailpasskey` hoặc kết thúc tạo account)
+- **Auto không thể** vì cần device thật + Google account thật + biometric.
+
+## Selector cheat sheet (dùng lại nhiều lần)
+
+| Element | Selector |
+|---|---|
+| First name | `#firstName` |
+| Last name | `#lastName` |
+| Day | `input[name="day"]` |
+| Year | `input[name="year"]` |
+| Month dropdown | `[aria-label="Month"]` |
+| Month option | `div[role="option"]` |
+| Gender | `[role="radio"]` |
+| Username | `input[aria-label="Username"]` |
+| Password | `input[aria-label="Password"]` |
+| Confirm password | `input[aria-label="Confirm"]` |
+| Show password | `input[type="checkbox"]` |
+| Next button | `button:has-text("Next")` |
+| Skip button | `button:has-text("Skip")` |
+| Help link | `a[aria-label*="Help"]` |
+
+## Hàm tiện ích (snippet để tự động hóa sau)
+
+```python
+from playwright.sync_api import Page
+
+def click_next(page: Page):
+    btn = page.locator('button:has-text("Next")').first
+    btn.wait_for(state="visible", timeout=10_000)
+    btn.click()
+
+def fill_name(page: Page, first: str, last: str):
+    page.locator('#firstName').fill(first)
+    page.locator('#lastName').fill(last)
+    click_next(page)
+    page.wait_for_url("**/birthdaygender**", timeout=15_000)
+
+def fill_birthday_gender(page: Page, day: int, year: int, month: str = "June", gender: str = "Male"):
+    page.locator('[aria-label="Month"]').click()
+    page.locator(f'div[role="option"]:has-text("{month}")').click()
+    page.locator('input[name="day"]').fill(str(day))
+    page.locator('input[name="year"]').fill(str(year))
+    page.locator(f'[role="radio"][aria-label*="{gender}"]').click()
+    click_next(page)
+    page.wait_for_url("**/username**", timeout=15_000)
+
+def fill_username(page: Page, username: str):
+    page.locator('input[aria-label="Username"]').fill(username)
+    click_next(page)
+    page.wait_for_url("**/password**", timeout=15_000)
+
+def fill_password(page: Page, password: str):
+    page.locator('input[aria-label="Password"]').fill(password)
+    page.locator('input[aria-label="Confirm"]').fill(password)
+    click_next(page)
+    page.wait_for_url("**/mophoneverification/**", timeout=15_000)
+
+# Main
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=False)
+    page = browser.new_context(
+        viewport={"width": 1366, "height": 768},
+        locale="en-US",
+        timezone_id="America/New_York",
+    ).new_page()
+    page.goto("https://accounts.google.com/signup")
+    fill_name(page, "Nguyen", "Test")
+    fill_birthday_gender(page, 15, 1995, "June", "Male")
+    fill_username(page, "nguyentest" + random_str(6))
+    fill_password(page, "TestPass123!")
+    # Bước 5: QR — dừng tại đây, cần quét bằng điện thoại thật
+```
+
+## Thứ tự flow thật tế (đã verify)
+
+```
+1. /lifecycle/steps/signup/name              ← Name
+2. /lifecycle/steps/signup/birthdaygender    ← Birthday + Gender
+3. /lifecycle/steps/signup/username          ← Gmail username
+4. /lifecycle/steps/signup/password          ← Password
+5. /lifecycle/steps/signup/mophoneverification/initial  ← 🚨 QR (chặn)
+```
 
 ## Phân tích công nghệ (câu trả lời chính)
 
