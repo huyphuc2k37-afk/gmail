@@ -1,0 +1,542 @@
+
+######################################################################
+# GMAIL INTERACTIVE INVESTIGATOR — STARTED 2026-08-31T15:31:58.603609
+# Open browser window → fill form by hand → script logs state per step
+######################################################################
+
+🚀 Opening https://accounts.google.com/signup ...
+
+======================================================================
+STEP 1: Initial signup page
+======================================================================
+URL: https://accounts.google.com/lifecycle/steps/signup/name?dsh=S721927347:1788165119326700&flowEntry=SignUp&flowName=GlifWebSignIn&TL=ACv9tzHhDcUOvHybWfW4mkocpRnkh0QQgcPU5Y-_mrynXdUy1N4QDiwtFfHDx5gv&continue=https://accounts.google.com/ManageAccount?nc%3D1
+Title: Create your Google Account
+
+📋 TEXT ON PAGE (80 items):
+   Create a Google Account
+   Enter your name
+   First name
+Last name (optional)
+   Next
+   English (United States)
+   Afrikaans
+   azərbaycan
+   bosanski
+   català
+   Čeština
+   Cymraeg
+   Dansk
+   Deutsch
+   eesti
+   English (United Kingdom)
+   Español (España)
+   Español (Latinoamérica)
+   euskara
+   Filipino
+   Français (Canada)
+   Français (France)
+   Gaeilge
+   galego
+   Hrvatski
+   Indonesia
+   isiZulu
+   íslenska
+   Italiano
+   Kiswahili
+   latviešu
+   lietuvių
+   magyar
+   Melayu
+   Nederlands
+   norsk
+   o‘zbek
+   polski
+   Português (Brasil)
+   Português (Portugal)
+   română
+   shqip
+   Slovenčina
+   slovenščina
+   srpski (latinica)
+   Suomi
+   Svenska
+   Tiếng Việt
+   Türkçe
+   Ελληνικά
+   беларуская
+   български
+   кыргызча
+   қазақ тілі
+   македонски
+   монгол
+   Русский
+   српски (ћирилица)
+   Українська
+   ქართული
+   հայերեն
+   ‫עברית‬‎
+   ‫اردو‬‎
+   ‫العربية‬‎
+   ‫فارسی‬‎
+   አማርኛ
+   नेपाली
+   मराठी
+   हिन्दी
+   অসমীয়া
+   বাংলা
+   ਪੰਜਾਬੀ
+   ગુજરાતી
+   ଓଡ଼ିଆ
+   தமிழ்
+   తెలుగు
+   ಕನ್ನಡ
+   മലയാളം
+   සිංහල
+   ไทย
+   ລາວ
+
+⌨️  INPUTS (3 items):
+   {"tag": "INPUT", "type": "text", "name": "firstName", "id": "firstName", "ariaLabel": "First name", "placeholder": "", "value": "", "visible": true, "rect": {"x": 709, "y": 278, "w": 419, "h": 52}}
+   {"tag": "INPUT", "type": "text", "name": "lastName", "id": "lastName", "ariaLabel": "Last name (optional)", "placeholder": "", "value": "", "visible": true, "rect": {"x": 709, "y": 358, "w": 419, "h": 52}}
+
+🔘 BUTTONS (5 items):
+   {"tag": "BUTTON", "text": "Next", "ariaLabel": "", "visible": true, "disabled": false, "href": ""}
+   {"tag": "BUTTON", "text": "", "ariaLabel": "Scroll down", "visible": true, "disabled": false, "href": ""}
+   {"tag": "A", "text": "Help", "ariaLabel": "Open Google Account Help Center (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://support.google.com/accounts?hl=en-US&p=account_iph"}
+   {"tag": "A", "text": "Privacy", "ariaLabel": "Privacy Policy (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://accounts.google.com/TOS?loc=VN&hl=en-US&privacy=true"}
+   {"tag": "A", "text": "Terms", "ariaLabel": "Google Terms of Service (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://accounts.google.com/TOS?loc=VN&hl=en-US"}
+
+
+👀 Watching for page changes for up to 60s (Ctrl+C to stop earlier)...
+   → Điền form bằng tay trên browser, script sẽ tự dump mỗi khi trang thay đổi
+   → Nhấn ENTER ở terminal này để dump lại state hiện tại
+
+
+======================================================================
+STEP 2: URL changed → 7%3A1788165119326700&flowEntry=SignUp&flowName=GlifWebSignIn
+======================================================================
+URL: https://accounts.google.com/lifecycle/steps/signup/birthdaygender?TL=ACv9tzHhDcUOvHybWfW4mkocpRnkh0QQgcPU5Y-_mrynXdUy1N4QDiwtFfHDx5gv&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S721927347%3A1788165119326700&flowEntry=SignUp&flowName=GlifWebSignIn
+Title: Basic information Enter your birthday and gender
+
+📋 TEXT ON PAGE (80 items):
+   Basic information
+   Enter your birthday and gender
+   Month
+April
+Day
+Year
+Gender
+Why we ask for your birthday and gender
+   Month
+   April
+   January
+   February
+   March
+   May
+   June
+   July
+   August
+   September
+   October
+   November
+   December
+   Gender
+   Female
+   Male
+   Rather not say
+   Custom
+   Please refer to me as
+   Other
+   Next
+   English (United States)
+   Afrikaans
+   azərbaycan
+   bosanski
+   català
+   Čeština
+   Cymraeg
+   Dansk
+   Deutsch
+   eesti
+   English (United Kingdom)
+   Español (España)
+   Español (Latinoamérica)
+   euskara
+   Filipino
+   Français (Canada)
+   Français (France)
+   Gaeilge
+   galego
+   Hrvatski
+   Indonesia
+   isiZulu
+   íslenska
+   Italiano
+   Kiswahili
+   latviešu
+   lietuvių
+   magyar
+   Melayu
+   Nederlands
+   norsk
+   o‘zbek
+   polski
+   Português (Brasil)
+   Português (Portugal)
+   română
+   shqip
+   Slovenčina
+   slovenščina
+   srpski (latinica)
+   Suomi
+   Svenska
+   Tiếng Việt
+   Türkçe
+   Ελληνικά
+   беларуская
+   български
+   кыргызча
+   қазақ тілі
+   македонски
+   монгол
+   Русский
+   српски (ћирилица)
+   Українська
+   ქართული
+   հայերեն
+
+⌨️  INPUTS (4 items):
+   {"tag": "INPUT", "type": "tel", "name": "day", "id": "day", "ariaLabel": "Day", "placeholder": "", "value": "", "visible": true, "rect": {"x": 853, "y": 269, "w": 132, "h": 52}}
+   {"tag": "INPUT", "type": "tel", "name": "year", "id": "year", "ariaLabel": "Year", "placeholder": "", "value": "", "visible": true, "rect": {"x": 996, "y": 268, "w": 134, "h": 54}}
+
+🔘 BUTTONS (6 items):
+   {"tag": "BUTTON", "text": "Why we ask for your birthday and gender", "ariaLabel": "", "visible": true, "disabled": false, "href": ""}
+   {"tag": "BUTTON", "text": "Next", "ariaLabel": "", "visible": true, "disabled": false, "href": ""}
+   {"tag": "BUTTON", "text": "", "ariaLabel": "Scroll down", "visible": true, "disabled": false, "href": ""}
+   {"tag": "A", "text": "Help", "ariaLabel": "Open Google Account Help Center (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://support.google.com/accounts?hl=en-US&p=account_iph"}
+   {"tag": "A", "text": "Privacy", "ariaLabel": "Privacy Policy (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://accounts.google.com/TOS?loc=VN&hl=en-US&privacy=true"}
+   {"tag": "A", "text": "Terms", "ariaLabel": "Google Terms of Service (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://accounts.google.com/TOS?loc=VN&hl=en-US"}
+
+
+======================================================================
+STEP 3: URL changed → 7%3A1788165119326700&flowEntry=SignUp&flowName=GlifWebSignIn
+======================================================================
+URL: https://accounts.google.com/lifecycle/steps/signup/username?TL=ACv9tzHhDcUOvHybWfW4mkocpRnkh0QQgcPU5Y-_mrynXdUy1N4QDiwtFfHDx5gv&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S721927347%3A1788165119326700&flowEntry=SignUp&flowName=GlifWebSignIn
+Title: How you’ll sign in Create a Gmail address for signing in to your Google Account
+
+📋 TEXT ON PAGE (80 items):
+   How you’ll sign in
+   Create a Gmail address for signing in to your Google Account
+   Username
+@gmail.com
+You can use letters, numbers & periods
+   @gmail.com
+   Next
+   Use your existing email
+   English (United States)
+   Afrikaans
+   azərbaycan
+   bosanski
+   català
+   Čeština
+   Cymraeg
+   Dansk
+   Deutsch
+   eesti
+   English (United Kingdom)
+   Español (España)
+   Español (Latinoamérica)
+   euskara
+   Filipino
+   Français (Canada)
+   Français (France)
+   Gaeilge
+   galego
+   Hrvatski
+   Indonesia
+   isiZulu
+   íslenska
+   Italiano
+   Kiswahili
+   latviešu
+   lietuvių
+   magyar
+   Melayu
+   Nederlands
+   norsk
+   o‘zbek
+   polski
+   Português (Brasil)
+   Português (Portugal)
+   română
+   shqip
+   Slovenčina
+   slovenščina
+   srpski (latinica)
+   Suomi
+   Svenska
+   Tiếng Việt
+   Türkçe
+   Ελληνικά
+   беларуская
+   български
+   кыргызча
+   қазақ тілі
+   македонски
+   монгол
+   Русский
+   српски (ћирилица)
+   Українська
+   ქართული
+   հայերեն
+   ‫עברית‬‎
+   ‫اردو‬‎
+   ‫العربية‬‎
+   ‫فارسی‬‎
+   አማርኛ
+   नेपाली
+   मराठी
+   हिन्दी
+   অসমীয়া
+   বাংলা
+   ਪੰਜਾਬੀ
+   ગુજરાતી
+   ଓଡ଼ିଆ
+   தமிழ்
+   తెలుగు
+   ಕನ್ನಡ
+   മലയാളം
+   සිංහල
+
+⌨️  INPUTS (2 items):
+   {"tag": "INPUT", "type": "text", "name": "Username", "id": "", "ariaLabel": "Username", "placeholder": "", "value": "", "visible": true, "rect": {"x": 709, "y": 278, "w": 322, "h": 52}}
+
+🔘 BUTTONS (6 items):
+   {"tag": "BUTTON", "text": "Next", "ariaLabel": "", "visible": true, "disabled": false, "href": ""}
+   {"tag": "BUTTON", "text": "Use your existing email", "ariaLabel": "", "visible": true, "disabled": false, "href": ""}
+   {"tag": "BUTTON", "text": "", "ariaLabel": "Scroll down", "visible": true, "disabled": false, "href": ""}
+   {"tag": "A", "text": "Help", "ariaLabel": "Open Google Account Help Center (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://support.google.com/accounts?hl=en-US&p=account_iph"}
+   {"tag": "A", "text": "Privacy", "ariaLabel": "Privacy Policy (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://accounts.google.com/TOS?loc=VN&hl=en-US&privacy=true"}
+   {"tag": "A", "text": "Terms", "ariaLabel": "Google Terms of Service (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://accounts.google.com/TOS?loc=VN&hl=en-US"}
+
+
+======================================================================
+STEP 4: URL changed → 7%3A1788165119326700&flowEntry=SignUp&flowName=GlifWebSignIn
+======================================================================
+URL: https://accounts.google.com/lifecycle/steps/signup/password?TL=ACv9tzHhDcUOvHybWfW4mkocpRnkh0QQgcPU5Y-_mrynXdUy1N4QDiwtFfHDx5gv&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S721927347%3A1788165119326700&flowEntry=SignUp&flowName=GlifWebSignIn
+Title: Create a strong password Create a strong password with a mix of letters, numbers and symbols
+
+📋 TEXT ON PAGE (80 items):
+   Create a strong password
+   Create a strong password with a mix of letters, numbers and symbols
+   Password
+Confirm
+Show password
+   Next
+   English (United States)
+   Afrikaans
+   azərbaycan
+   bosanski
+   català
+   Čeština
+   Cymraeg
+   Dansk
+   Deutsch
+   eesti
+   English (United Kingdom)
+   Español (España)
+   Español (Latinoamérica)
+   euskara
+   Filipino
+   Français (Canada)
+   Français (France)
+   Gaeilge
+   galego
+   Hrvatski
+   Indonesia
+   isiZulu
+   íslenska
+   Italiano
+   Kiswahili
+   latviešu
+   lietuvių
+   magyar
+   Melayu
+   Nederlands
+   norsk
+   o‘zbek
+   polski
+   Português (Brasil)
+   Português (Portugal)
+   română
+   shqip
+   Slovenčina
+   slovenščina
+   srpski (latinica)
+   Suomi
+   Svenska
+   Tiếng Việt
+   Türkçe
+   Ελληνικά
+   беларуская
+   български
+   кыргызча
+   қазақ тілі
+   македонски
+   монгол
+   Русский
+   српски (ћирилица)
+   Українська
+   ქართული
+   հայերեն
+   ‫עברית‬‎
+   ‫اردو‬‎
+   ‫العربية‬‎
+   ‫فارسی‬‎
+   አማርኛ
+   नेपाली
+   मराठी
+   हिन्दी
+   অসমীয়া
+   বাংলা
+   ਪੰਜਾਬੀ
+   ગુજરાતી
+   ଓଡ଼ିଆ
+   தமிழ்
+   తెలుగు
+   ಕನ್ನಡ
+   മലയാളം
+   සිංහල
+   ไทย
+   ລາວ
+
+⌨️  INPUTS (4 items):
+   {"tag": "INPUT", "type": "password", "name": "Passwd", "id": "", "ariaLabel": "Password", "placeholder": "", "value": "", "visible": true, "rect": {"x": 709, "y": 260, "w": 419, "h": 52}}
+   {"tag": "INPUT", "type": "password", "name": "PasswdAgain", "id": "", "ariaLabel": "Confirm", "placeholder": "", "value": "", "visible": true, "rect": {"x": 709, "y": 340, "w": 419, "h": 52}}
+   {"tag": "INPUT", "type": "checkbox", "name": "", "id": "", "ariaLabel": "", "placeholder": "", "value": "on", "visible": true, "rect": {"x": 695, "y": 390, "w": 48, "h": 48}}
+
+🔘 BUTTONS (5 items):
+   {"tag": "BUTTON", "text": "Next", "ariaLabel": "", "visible": true, "disabled": false, "href": ""}
+   {"tag": "BUTTON", "text": "", "ariaLabel": "Scroll down", "visible": true, "disabled": false, "href": ""}
+   {"tag": "A", "text": "Help", "ariaLabel": "Open Google Account Help Center (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://support.google.com/accounts?hl=en-US&p=account_iph"}
+   {"tag": "A", "text": "Privacy", "ariaLabel": "Privacy Policy (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://accounts.google.com/TOS?loc=VN&hl=en-US&privacy=true"}
+   {"tag": "A", "text": "Terms", "ariaLabel": "Google Terms of Service (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://accounts.google.com/TOS?loc=VN&hl=en-US"}
+
+
+======================================================================
+STEP 5: URL changed → 7%3A1788165119326700&flowEntry=SignUp&flowName=GlifWebSignIn
+======================================================================
+URL: https://accounts.google.com/lifecycle/steps/signup/mophoneverification/initial?TL=ACv9tzHhDcUOvHybWfW4mkocpRnkh0QQgcPU5Y-_mrynXdUy1N4QDiwtFfHDx5gv&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S721927347%3A1788165119326700&flowEntry=SignUp&flowName=GlifWebSignIn
+Title: Verify some info before creating an account Google needs to verify some info about your device or phone number before you can continue. This helps keep you and others safe online by preventing abuse from computer programs or bots.
+
+📋 TEXT ON PAGE (80 items):
+   Verify some info before creating an account
+   Google needs to verify some info about your device or phone number before you can continue. This helps keep you and others safe online by preventing abuse from computer programs or bots.
+   Scan the QR code with your phone
+Open your Camera app, scan the code, and tap the link. Then, follow a few more steps on your phone to complete verification. You’ll need to switch back to this device to continue.
+
+Scanning the QR code won’t associate your device or phone number with the new Google Account.
+   Scan the QR code with your phone
+   English (United States)
+   Afrikaans
+   azərbaycan
+   bosanski
+   català
+   Čeština
+   Cymraeg
+   Dansk
+   Deutsch
+   eesti
+   English (United Kingdom)
+   Español (España)
+   Español (Latinoamérica)
+   euskara
+   Filipino
+   Français (Canada)
+   Français (France)
+   Gaeilge
+   galego
+   Hrvatski
+   Indonesia
+   isiZulu
+   íslenska
+   Italiano
+   Kiswahili
+   latviešu
+   lietuvių
+   magyar
+   Melayu
+   Nederlands
+   norsk
+   o‘zbek
+   polski
+   Português (Brasil)
+   Português (Portugal)
+   română
+   shqip
+   Slovenčina
+   slovenščina
+   srpski (latinica)
+   Suomi
+   Svenska
+   Tiếng Việt
+   Türkçe
+   Ελληνικά
+   беларуская
+   български
+   кыргызча
+   қазақ тілі
+   македонски
+   монгол
+   Русский
+   српски (ћирилица)
+   Українська
+   ქართული
+   հայերեն
+   ‫עברית‬‎
+   ‫اردو‬‎
+   ‫العربية‬‎
+   ‫فارسی‬‎
+   አማርኛ
+   नेपाली
+   मराठी
+   हिन्दी
+   অসমীয়া
+   বাংলা
+   ਪੰਜਾਬੀ
+   ગુજરાતી
+   ଓଡ଼ିଆ
+   தமிழ்
+   తెలుగు
+   ಕನ್ನಡ
+   മലയാളം
+   සිංහල
+   ไทย
+   ລາວ
+
+⌨️  INPUTS (1 items):
+
+🔘 BUTTONS (4 items):
+   {"tag": "BUTTON", "text": "", "ariaLabel": "Scroll down", "visible": true, "disabled": false, "href": ""}
+   {"tag": "A", "text": "Help", "ariaLabel": "Open Google Account Help Center (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://support.google.com/accounts?hl=en-US&p=account_iph"}
+   {"tag": "A", "text": "Privacy", "ariaLabel": "Privacy Policy (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://accounts.google.com/TOS?loc=VN&hl=en-US&privacy=true"}
+   {"tag": "A", "text": "Terms", "ariaLabel": "Google Terms of Service (external, opens in a new window)", "visible": true, "disabled": false, "href": "https://accounts.google.com/TOS?loc=VN&hl=en-US"}
+
+🚨 QR CODE DETECTED:
+   {
+  "type": "img",
+  "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADIAQAAAACFI5MzAAADmUlEQVR42u2YPY6kMBCFq+XAGX0BJF/Dma8EF+DnAnAlZ74Gki8AmQOL2lcNM7sbbNDVK22yrZFmxCcNUPXq1XMT/+lD/8lfJ5XInXYbPI2lfZatL2YnGrVkZDeXbWQzpzx5s4R8yEUl6WyLOzShkm0b3w5kjth+Qppg9pDXktcof3xKLPWl7YiekY/0ERm5fRSDMvRMnTULuZ/VeZ8QtX367af77tzbBJ/a+W0IeWZCt8f4i6reJrUjN6eNPE/kJsqo6E5OS3iV+/Catsa7xdc+VTR/VBL8dnOkxjpocI5m8S2RYSXh08obj4UaalEMsvQBgXbMwfmEujnvFm+Py19T8jbhuWA+8u4hQBqIZ65NaLWkNh6ipiG4lfHIjhNUmVlJmAvKgAsYuNoFFGAb0/UEGgIBNlQfhXdvGDMnZnNpVE",
+  "alt": "Image of QR code to scan with the camera on your mobile device.",
+  "width": 240,
+  "height": 240,
+  "parentTag": "SECTION",
+  "parentClass": "Em2Ord",
+  "parentText": ""
+}
+
+🚨🚨🚨 QR DETECTED — STOPPING 🚨🚨🚨
+Full QR context saved. URL: https://accounts.google.com/lifecycle/steps/signup/mophoneverification/initial?TL=ACv9tzHhDcUOvHybWfW4mkocpRnkh0QQgcPU5Y-_mrynXdUy1N4QDiwtFfHDx5gv&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1&dsh=S721927347%3A1788165119326700&flowEntry=SignUp&flowName=GlifWebSignIn
+
+✅ Done. Log saved to: c:\Users\Admin\Documents\Gmail\investigation\interactive_log.txt
+   Total steps logged: 5
+   Console errors captured: 0
