@@ -1,0 +1,454 @@
+{
+    "title": "gmail",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 615,
+            "height": 729,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "https://accounts.google.com/lifecycle/steps/signup/name?authuser=0&continue=https://mail.google.com/mail/&dsh=S1946364623:1788165861042624&ec=GAlAFw&flowEntry=SignUp&flowName=GlifWebSignIn&hl=vi&service=mail&TL=ACv9tzFFLhGGZSer2hQ4mqOKf_q5vPREdyaa4x4Bc_OLbUPlkR9XIAiJJ1UsSuxY",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "https://accounts.google.com/lifecycle/steps/signup/name?authuser=0&continue=https://mail.google.com/mail/&dsh=S1946364623:1788165861042624&ec=GAlAFw&flowEntry=SignUp&flowName=GlifWebSignIn&hl=vi&service=mail&TL=ACv9tzFFLhGGZSer2hQ4mqOKf_q5vPREdyaa4x4Bc_OLbUPlkR9XIAiJJ1UsSuxY",
+                    "title": "Tạo Tài khoản Google của bạn"
+                }
+            ]
+        },
+        {
+            "type": "change",
+            "value": "M",
+            "selectors": [
+                [
+                    "aria/Họ (không bắt buộc)"
+                ],
+                [
+                    "#lastName"
+                ],
+                [
+                    "xpath///*[@id=\"lastName\"]"
+                ],
+                [
+                    "pierce/#lastName"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "m",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Minh",
+            "selectors": [
+                [
+                    "aria/Họ (không bắt buộc)"
+                ],
+                [
+                    "#lastName"
+                ],
+                [
+                    "xpath///*[@id=\"lastName\"]"
+                ],
+                [
+                    "pierce/#lastName"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Tên"
+                ],
+                [
+                    "#firstName"
+                ],
+                [
+                    "xpath///*[@id=\"firstName\"]"
+                ],
+                [
+                    "pierce/#firstName"
+                ]
+            ],
+            "offsetY": 46.199981689453125,
+            "offsetX": 40.400001525878906
+        },
+        {
+            "type": "change",
+            "value": "ngoc",
+            "selectors": [
+                [
+                    "aria/Tên"
+                ],
+                [
+                    "#firstName"
+                ],
+                [
+                    "xpath///*[@id=\"firstName\"]"
+                ],
+                [
+                    "pierce/#firstName"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.JYXaTc span"
+                ],
+                [
+                    "xpath///*[@id=\"collectNameNext\"]/div/button/span"
+                ],
+                [
+                    "pierce/div.JYXaTc span"
+                ],
+                [
+                    "text/Tiếp theo"
+                ]
+            ],
+            "offsetY": 3.20001220703125,
+            "offsetX": 57.637481689453125
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Ngày"
+                ],
+                [
+                    "#day"
+                ],
+                [
+                    "xpath///*[@id=\"day\"]"
+                ],
+                [
+                    "pierce/#day"
+                ]
+            ],
+            "offsetY": 28.199981689453125,
+            "offsetX": 43.400001525878906
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Ngày"
+                ],
+                [
+                    "#day"
+                ],
+                [
+                    "xpath///*[@id=\"day\"]"
+                ],
+                [
+                    "pierce/#day"
+                ]
+            ],
+            "offsetY": 30.199981689453125,
+            "offsetX": 62.400001525878906
+        },
+        {
+            "type": "change",
+            "value": "12",
+            "selectors": [
+                [
+                    "aria/Ngày"
+                ],
+                [
+                    "#day"
+                ],
+                [
+                    "xpath///*[@id=\"day\"]"
+                ],
+                [
+                    "pierce/#day"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.vF73ge div.VfPpkd-TkwUic > div"
+                ],
+                [
+                    "xpath///*[@id=\"month\"]/div/div[1]/div"
+                ],
+                [
+                    "pierce/div.vF73ge div.VfPpkd-TkwUic > div"
+                ]
+            ],
+            "offsetY": 29.199981689453125,
+            "offsetX": 82.73750305175781
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Tháng 5"
+                ],
+                [
+                    "div.TcuCfd li:nth-of-type(5)"
+                ],
+                [
+                    "xpath///*[@id=\"month\"]/div/div[2]/ul/li[5]"
+                ],
+                [
+                    "pierce/div.TcuCfd li:nth-of-type(5)"
+                ]
+            ],
+            "offsetY": 45.20001220703125,
+            "offsetX": 54.73750305175781
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Năm"
+                ],
+                [
+                    "#year"
+                ],
+                [
+                    "xpath///*[@id=\"year\"]"
+                ],
+                [
+                    "pierce/#year"
+                ]
+            ],
+            "offsetY": 35.199981689453125,
+            "offsetX": 70.0625
+        },
+        {
+            "type": "change",
+            "value": "2005",
+            "selectors": [
+                [
+                    "aria/Năm"
+                ],
+                [
+                    "#year"
+                ],
+                [
+                    "xpath///*[@id=\"year\"]"
+                ],
+                [
+                    "pierce/#year"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.Hxu8E > div.Udn8cf div.VfPpkd-TkwUic > div"
+                ],
+                [
+                    "xpath///*[@id=\"gender\"]/div/div[1]/div"
+                ],
+                [
+                    "pierce/div.Hxu8E > div.Udn8cf div.VfPpkd-TkwUic > div"
+                ]
+            ],
+            "offsetY": 44.199981689453125,
+            "offsetX": 149.4000015258789
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Nữ"
+                ],
+                [
+                    "div.Hxu8E > div.Udn8cf li:nth-of-type(1)"
+                ],
+                [
+                    "xpath///*[@id=\"gender\"]/div/div[2]/ul/li[1]"
+                ],
+                [
+                    "pierce/div.Hxu8E > div.Udn8cf li:nth-of-type(1)"
+                ]
+            ],
+            "offsetY": 21.199981689453125,
+            "offsetX": 72.4000015258789
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.JYXaTc div.VfPpkd-RLmnJb"
+                ],
+                [
+                    "xpath///*[@id=\"birthdaygenderNext\"]/div/button/div[3]"
+                ],
+                [
+                    "pierce/div.JYXaTc div.VfPpkd-RLmnJb"
+                ]
+            ],
+            "offsetY": 10.20001220703125,
+            "offsetX": 16.637481689453125
+        },
+        {
+            "type": "change",
+            "value": "minhngoc384kd3",
+            "selectors": [
+                [
+                    "aria/Tên người dùng"
+                ],
+                [
+                    "input"
+                ],
+                [
+                    "xpath///*[@id=\"yDmH0d\"]/c-wiz/main/div[2]/div/div/div/span/section/div/div/div/div[1]/div[1]/div[1]/div/div[1]/input"
+                ],
+                [
+                    "pierce/input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.JYXaTc div.VfPpkd-RLmnJb"
+                ],
+                [
+                    "xpath///*[@id=\"next\"]/div/button/div[3]"
+                ],
+                [
+                    "pierce/div.JYXaTc div.VfPpkd-RLmnJb"
+                ]
+            ],
+            "offsetY": 11.20001220703125,
+            "offsetX": 74.63748168945312
+        },
+        {
+            "type": "change",
+            "value": "Huyphuc23.",
+            "selectors": [
+                [
+                    "aria/Mật khẩu"
+                ],
+                [
+                    "div.YqLCIe > div > div > div:nth-of-type(1) input"
+                ],
+                [
+                    "xpath///*[@id=\"passwd\"]/div[1]/div/div[1]/input"
+                ],
+                [
+                    "pierce/div.YqLCIe > div > div > div:nth-of-type(1) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Xác nhận"
+                ],
+                [
+                    "div.YqLCIe > div > div > div:nth-of-type(2) input"
+                ],
+                [
+                    "xpath///*[@id=\"confirm-passwd\"]/div[1]/div/div[1]/input"
+                ],
+                [
+                    "pierce/div.YqLCIe > div > div > div:nth-of-type(2) input"
+                ]
+            ],
+            "offsetY": 37,
+            "offsetX": 278.4000015258789
+        },
+        {
+            "type": "change",
+            "value": "H",
+            "selectors": [
+                [
+                    "aria/Xác nhận"
+                ],
+                [
+                    "div.YqLCIe > div > div > div:nth-of-type(2) input"
+                ],
+                [
+                    "xpath///*[@id=\"confirm-passwd\"]/div[1]/div/div[1]/input"
+                ],
+                [
+                    "pierce/div.YqLCIe > div > div > div:nth-of-type(2) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "keyUp",
+            "key": "h",
+            "target": "main"
+        },
+        {
+            "type": "change",
+            "value": "Huyphuc23.",
+            "selectors": [
+                [
+                    "aria/Xác nhận"
+                ],
+                [
+                    "div.YqLCIe > div > div > div:nth-of-type(2) input"
+                ],
+                [
+                    "xpath///*[@id=\"confirm-passwd\"]/div[1]/div/div[1]/input"
+                ],
+                [
+                    "pierce/div.YqLCIe > div > div > div:nth-of-type(2) input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div.JYXaTc span"
+                ],
+                [
+                    "xpath///*[@id=\"createpasswordNext\"]/div/button/span"
+                ],
+                [
+                    "pierce/div.JYXaTc span"
+                ],
+                [
+                    "text/Tiếp theo"
+                ]
+            ],
+            "offsetY": 0.39996337890625,
+            "offsetX": 34.637481689453125
+        }
+    ]
+}
