@@ -249,13 +249,13 @@ with sync_playwright() as p:
     last_url = info['url']
 
     # Watch for URL changes → dump state on each
-    log("\n👀 Watching for page changes for up to 60s (Ctrl+C to stop earlier)...")
+    log("\n👀 Watching for page changes for up to 120s (Ctrl+C to stop earlier)...")
     log("   → Điền form bằng tay trên browser, script sẽ tự dump mỗi khi trang thay đổi")
     log("   → Nhấn ENTER ở terminal này để dump lại state hiện tại\n")
 
     start = time.time()
     try:
-        while time.time() - start < 60:
+        while time.time() - start < 120:
             try:
                 page.wait_for_url(lambda url: url != last_url, timeout=2000)
             except:
